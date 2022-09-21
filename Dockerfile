@@ -1,10 +1,12 @@
-FROM ppiper/cf-cli
+FROM ubuntu:latest
+
+RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+RUN echo "deb http://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+RUN apt-get update
+RUN apt-get install cf-cli
+RUN cf --version
 
 
-
-RUN cf version
-RUN mkdir github/home
-WORKDIR /github/home
 
 
 COPY entrypoint.sh /entrypoint.sh
