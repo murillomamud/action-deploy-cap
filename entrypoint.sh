@@ -11,8 +11,8 @@ CF_COMMAND=$6
 #cf auth "$INPUT_CF_USERNAME" "$INPUT_CF_PASSWORD"
 
 
-
-cf login -a $CF_API -u $CF_USER -p $CF_PASS
+cf api $CF_API
+cf login -u $CF_USER -p $CF_PASS
 cf apps
 
 #sh -c "cf $*"  
