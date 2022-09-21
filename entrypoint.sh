@@ -4,7 +4,7 @@
 #cf api "$INPUT_CF_API"
 #cf auth "$INPUT_CF_USERNAME" "$INPUT_CF_PASSWORD"
 
-chmod -R 777 ./
+CF_HOME=./
 
 cf login -a "$INPUT_CF_API" -u "$INPUT_CF_USERNAME" -p "$INPUT_CF_PASSWORD"
 cf apps
