@@ -26,4 +26,9 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.cf_api }}
+    - ${{ inputs.cf_username }}
+    - ${{ inputs.cf_password }}
+    - ${{ inputs.cf_org }}  
+    - ${{ inputs.cf_space }}
     - ${{ inputs.command }}
