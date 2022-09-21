@@ -3,7 +3,8 @@ FROM ppiper/cf-cli
 
 
 RUN cf version
-WORKDIR /app
+RUN mkdir test
+WORKDIR /test
 
 
 COPY entrypoint.sh /entrypoint.sh
