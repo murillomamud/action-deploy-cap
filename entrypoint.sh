@@ -14,5 +14,6 @@ CF_COMMAND=$6
 cf api $CF_API
 cf login -u $CF_USER -p $CF_PASS
 cf apps
+cf $CF_COMMAND
 
 #sh -c "cf $*"  
