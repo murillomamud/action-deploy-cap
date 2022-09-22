@@ -13,7 +13,7 @@ CF_COMMAND=$6
 echo $CF_COMMAND
 
 cf api $CF_API
-cf login -u $CF_USER -p $CF_PASS
+cf login -u $CF_USER -p $CF_PASS -o $CF_ORG
 cf install-plugin multiapps -f
 cf apps
 cf $CF_COMMAND
