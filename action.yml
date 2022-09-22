@@ -15,6 +15,7 @@ inputs:
     required: true
   cf_org:
     description: "Target Organization"
+    default: "e51034c8trial"
     required: false
   cf_space:
     description: "Target Space"
