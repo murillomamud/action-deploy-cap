@@ -14,6 +14,7 @@ echo $CF_COMMAND
 
 cf api $CF_API
 cf login -u $CF_USER -p $CF_PASS
+cf install-plugin multiapps
 cf apps
 cf $CF_COMMAND
 
